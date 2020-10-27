@@ -4286,6 +4286,7 @@ class PDFConsole(cmd.Cmd):
         elif printOutput:
             if niceOutput:
                 niceOutput = newLine + niceOutput + newLine
+                self.variables['output_limit'][0] = -1
                 if self.variables['output_limit'][0] is None or self.variables['output_limit'][
                     0] == -1 or not self.use_rawinput:
                     print niceOutput
